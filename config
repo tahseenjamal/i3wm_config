@@ -181,3 +181,6 @@ exec xinput set-prop 12 277 1
 exec xinput set-prop 12 287 1
 
 exec --no-startup-id start-pulseaudio-x11
+
+# For mouse size change create .Xresources file and change Xcursor size
+# # https://gist.github.com/AnthonyDiGirolamo/d2124446c8656eb578a64c9e9dd4cae0
