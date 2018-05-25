@@ -29,6 +29,11 @@ bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '/home/tahseen/Pictures/s
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start surf browser
+bindsym $mod+b exec surf https://www.google.com/ncr
+bindsym $mod+y exec surf https://www.youtube.com
+
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -155,7 +160,8 @@ bar {
 
 exec feh --bg-scale /usr/share/backgrounds/Forest.png
 
-exec xrandr --output DP-1 --off --output HDMI-1 --off --output HDMI-2 --mode 1360x768 --pos 0x0 --rotate normal
+exec xrandr
+exec xrandr --output HDMI-2 --mode 1360x768 --pos 0x0 --rotate normal
 
 #exec xset dpms 0 0 0
 #exec xset -dpms
@@ -164,6 +170,8 @@ exec --no-startup-id sleep 3 && xfce4-power-manager
 
 exec --no-startup-id compton 
 
+exec --no-startup-id nm-applet
+
 exec --no-startup-id insync start
 
 exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapButton3=1
@@ -171,3 +179,5 @@ exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapBut
 exec xinput set-prop 12 277 1
 
 exec xinput set-prop 12 287 1
+
+exec --no-startup-id start-pulseaudio-x11
